@@ -1,0 +1,54 @@
+{
+    "id": "1",
+    "name": "Equacoes Simples",
+    "description": "Teste seus conhecimentos sobre equacoes do primeiro grau",
+    "numAttempts": "3",
+    "time": "5",
+    "creator": "usuario x",
+    "questions":
+    [
+        {
+            "id": "0",
+            "title": "Qual o valor de X na expressao: 2X - 10 = 0",
+            "type": "MultipleChoice",
+            "level": "1",
+            "correctAnswer": "5",
+            "choices":
+            [
+                "5",
+                "4",
+                "-5",
+                "10",
+                "-10"
+            ]
+        },
+        {
+            "id": "1",
+            "title": "Qual o valor de X na expressao: 10 - 3X + 5 = 0",
+            "type": "MultipleChoice",
+            "level": "1",
+            "correctAnswer": "5",
+            "choices":
+            [
+                "7",
+                "5",
+                "4",
+                "-4"
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Qual o valor de X na expressao: x/5 = 10/5",
+            "type": "MultipleChoice",
+            "level": "1",
+            "correctAnswer": "10",
+            "choices":
+            [
+                "12",
+                "10",
+                "5",
+                "-10"
+            ]
+        }
+    ]
+}

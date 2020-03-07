@@ -1,0 +1,61 @@
+	<!doctype html>
+	{% extends "extends/base.html" %}
+	{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="display-5"><i class="fas fa-atlas text-primary"></i> {{ quiz['name'] }}</h3>
+                    <p>{{ quiz['description'] }}</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+               {% set id = quiz['id'] %}
+               <form method="post" action="{{ url_for('resposta', iD=id) }}">
+                <div class="col-12">
+                    <ul class="nav nav-pills justify-content-center mb-4" id="pills-nav" role="tablist">
+                       {% set a = "" %}
+                       {% for i in range(0,numQuestions): %}
+                       		{% if i == 0: %}
+                       			{% set a = "active" %}
+                       		{% else: %}
+                       			{% set a = "" %}
+                       		{% endif %}
+							<li class="nav-item">
+								<a class="nav-link {{ a }}" id="nav-pills-{{ i }}" data-toggle="pill" href="#nav-item-{{ i }}">Questão {{ i+1 }}</a>
+							</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="tab-content" id="nav-pills-content">
+                       	{% set a = "" %}
+                       	{% set ch = 0 %}
+                       	{% for i in range(0,numQuestions): %}
+                       		{% if i == 0: %}
+                       			{% set a = "show active" %}
+                       		{% endif %}
+							<div class="tab-pane fade {{ a }}" id="nav-item-{{ i }}" role="tabpanel">
+								<div class="row">
+									<div class="col-sm-12">
+										<h4>Questão {{ i+1 }}</h4>
+										<p class="lead">{{ quiz['questions'][i]['title'] }}</p>
+										
+										{% for j in quiz['questions'][i]['choices']: %}
+											{% if j == "": %}
+												<h6 class="text-primary">Resposta: </h6><input type="text" name="alt{{ i }}"/>
+											{% else: %}
+												<input type="radio" name="alt{{ i }}" value="{{ j }}" id="{{ j }}" required><label for="{{ j }}">&nbsp;{{ j }}</label><br>
+											{% endif %}
+										{% endfor %}
+									</div>
+								</div>
+							</div>
+                        {% endfor %}
+                    </div>	
+                    <br><center><input type="submit" value="Enviar Respostas" class="btn btn-primary"></center>
+                </div>
+				</form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,44 @@
+<!doctype html>
+ <html>
+  <head>
+		<title>Módulo Playground</title>
+		<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../static/node_modules/bootstrap/compiller/bootstrap.css">
+    <link rel="stylesheet" href="../../static/style/css/style.css">
+    <link rel="stylesheet" href="../../static/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/my-login.css">
+  </head>
+  <body class="my-login-page" background="../static/imgs/fundo.jpg">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="../static/imgs/logo-great2.fw.png" alt="logo">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title text-danger" align="center">Módulo Playground</h4>
+							{% block content %}{% endblock %}
+							</div>
+					</div>
+					<div class="footer">
+						Copyright &copy; 2019 &mdash; LAWS
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- código padrão para utilizar o bootstrap -->  
+    <script src="../../static/node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../static/node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../../static/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>

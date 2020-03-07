@@ -1,0 +1,35 @@
+{
+    "id": "11",
+    "name": "Computacao > Programacao > Estruturas de repeticao",
+    "description": "Teste seus conhecimentos sobre as estruturas de decisao for, while e do-while",
+    "questions":
+    [
+        {
+            "title": "O techo de codigo ' for(i=0;i<=10;i+=2){ printf('$d', &i); } ' imprime: 02468",
+            "correctAnswer": "Falso",
+            "choices":
+            [
+                "Verdadeiro",
+                "Falso"
+            ]
+        },
+        {
+            "title": "O techo de codigo ' for(i=0;i<10;i+=2){ if(i % 2 != 0){ printf('$d', &i); } } ' imprime: 13579",
+            "correctAnswer": "Verdadeiro",
+            "choices":
+            [
+                "Verdadeiro",
+                "Falso"
+            ]
+        },
+        {
+            "title": "O trecho de codigo ' i=0; while(i < 5){ printf('oi'); } ' imprime: oioioioioi",
+            "correctAnswer": "Falso",
+            "choices":
+            [
+                "Verdadeiro",
+                "Falso"
+            ]
+        }
+    ]
+}

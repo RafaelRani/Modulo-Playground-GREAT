@@ -1,0 +1,45 @@
+{
+    "id": "2",
+    "name": "Computacao > Geral",
+    "description": "Perguntas de assuntos gerais de multipla escolha, verdadeiro ou falso e respostas curtas",
+    "numAttempts": "3",
+    "time": "5",
+    "creator": "usuario x",
+    "questions":
+    [
+        {
+            "id": "3",
+            "title": "O trecho de codigo a seguir: ' x=3+2; if(x == 5){ x++; } printf(%d, &x); ' imprime o valor:",
+            "type": "MultipleChoice",
+            "level": "1",
+            "correctAnswer": "6",
+            "choices":
+            [
+                "5",
+                "6",
+                "4",
+                "7"
+            ]
+        },
+        {
+            "id": "4",
+            "title": "O techo de codigo ' for(i=0;i<=10;i+=2){ printf('$d', &i); } ' imprime: 02468",
+            "type": "TrueOrFalse",
+            "level": "1",
+            "correctAnswer": "Falso",
+            "choices":
+            [
+                "Verdadeiro",
+                "Falso"
+            ]
+        },
+        {
+            "id": "5",
+            "title": "Quem foi o criador da linguagem C e do sistema UNIX ?",
+            "type": "ShortAnswer",
+            "level": "1",
+            "correctAnswer": "Dennis Ritchie",
+            "choices":[""]
+        }
+    ]
+}

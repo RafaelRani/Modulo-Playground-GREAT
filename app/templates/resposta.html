@@ -1,0 +1,27 @@
+<!doctype html>
+{% extends "extends/base.html" %}
+{% block content %}
+	<br>
+	<div class="tab-content mb-3" align="center">
+      <div class="tab-pane container active" id="home">
+            <div class="col-sm-6 col-md-4">
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h4 class="card-title mb-2 text-danger">INFORMAÇÕES ENVIADAS</h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+						<li class="list-group-item text-success">Nome de usuário: <span class="text-primary">{{ user }}</span></li>
+                        <li class="list-group-item text-success">Id do questionário: <span class="text-primary">{{ iD }}</span></li>
+                        <li class="list-group-item text-success">Número de questões acertadas: <span class="text-primary">{{ cont }}</span></li>
+                        <li class="list-group-item text-danger"><h5>RESPOSTAS</h5></li>
+                        <div class="container">
+                        {% for i in range(0,respostas | length): %}
+                        	<li class="list-group-item text-success">Questão {{ i+1 }}: <span class="text-primary">{{ respostas[i] }}</span></li>
+                        {% endfor %}
+                        </div>
+                    </ul>
+                </div>
+            </div>
+      </div>
+    </div>
+{% endblock %}

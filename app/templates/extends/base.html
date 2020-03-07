@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../static/node_modules/bootstrap/compiller/bootstrap.css">
+    <link rel="stylesheet" href="../../static/style/css/style.css">
+    <link rel="stylesheet" href="../../static/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <style>
+		.dropdown-container {
+		  display: none;
+		
+		}
+	</style>
+
+    <title>Módulo Playground</title>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary"> <!-- navbar -->
+        <div class="container">
+
+            <a class="navbar-brand h1 mb-0" href="#"><img src="../../static/imgs/logo-great.png"> GReAT</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                <span class="navbar-toggler-icon"></span>    
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSite"> <!-- navbar > menu -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Inicio</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('playground') }}">Selecionar Jogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre o módulo</a>
+                    </li>
+                    
+                </ul>
+                <ul class="navbar-nav ml-auto"> <!-- navbar > menu dropdown -->
+                    <li class="nav-item dropdown"> <!-- para menu dropdown -->
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+                            {{ user }}
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for('logout') }}">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> <!-- navbar > menu -->
+        </div>    
+    </nav> <!-- fim navbar -->
+    <!------------------------------------------------------------------------------------------------------------------>
+	 {% block content %}{% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- código padrão para utilizar o bootstrap -->  
+    <script src="../../static/node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../static/node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../../static/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+		//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		/*var dropdown = document.getElementsByClassName("dropdown-btn");*/
+		var dropdown = document.getElementsByClassName("btn btn-outline-primary");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") {
+			  dropdownContent.style.display = "none";
+			} else {
+			  dropdownContent.style.display = "block";
+			}
+		  });
+		} 
+	</script>
+  </body>
+</html>

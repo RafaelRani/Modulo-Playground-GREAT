@@ -1,0 +1,43 @@
+	<!doctype html>
+	{% extends "extends/base.html" %}
+	{% block content %}
+	 <div class="container">
+	 <div class="row">
+		 <div class="col-3 mb-3 text-danger" style="padding-top: 10px"><h4>Módulo Playground</h4></div>
+		 <div class="col-12 mb-0 text-success">Selecione uma disciplina</div>
+		 <div class="col-12 mb-0"><hr></div>
+		 <ul class="nav nav-tabs">
+			  {% for i in quiz: %}  
+				  <li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#{{ i['titulo'] }}">{{ i['titulo'] }}</a>
+				  </li>
+			   {% endfor %}
+		  </ul>
+	  </div>	 
+    <div class="tab-content" align="center">
+      {% for i in quiz: %}
+		  <div class="tab-pane container" id="{{ i['titulo'] }}">
+				<div class="col-sm-12 col-md-8">
+					<div class="card mb-12">
+						<div class="card-body">
+							<center><h5 class="card-title mb-3 text-danger">{{ i['titulo'] }}</h5></center>
+							<center class="card-subtitle mb-3 text-success">Selecione um tópico e quizz</center>
+							{% for j in i['topicos']: %}
+							<div class="btn-group-vertical btn-block btn-group-lg" role="group">
+								<a class="btn btn-outline-primary btn-success" href="#quizz">{{ j['name'] }}</a>
+								<div class="dropdown-container" id="quizz">
+									{% for k in j['quizzes']: %}
+										<a class="btn" href="{{ url_for('returnQuiz', idQuiz=k['id']) }}">{{ k['name'] }}</a>
+									{% endfor %}
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+						<div class="card-footer text-muted"></div>
+					</div>
+				</div>
+		  </div>
+      {% endfor %}
+    </div>
+	</div>
+	{% endblock %}

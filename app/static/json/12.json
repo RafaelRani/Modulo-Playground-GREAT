@@ -1,0 +1,23 @@
+{
+    "id": "12",
+    "name": "Computacao > Programacao > Teste de Fundamentos da Computacao",
+    "description": "Teste seus conhecimentos a respeito de assuntos diversos na área da computacao",
+    "questions":
+    [
+        {
+            "title": "Quem foi o criador da linguagem C e do sistema UNIX ?",
+            "correctAnswer": "Dennis Ritchie",
+            "choices":[""]
+        },
+        {
+            "title": "o trecho de codigo ' for(i=0;i<=10;i+=2){ printf('$d', &i); } ' imprime o que? ",
+            "correctAnswer": "0246810",
+            "choices":[""]
+        },
+        {
+            "title": "Qual o sistema operacional criado por Steve Jobs?",
+            "correctAnswer": "IOS",
+            "choices":[""]
+        }
+    ]
+}
