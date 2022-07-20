@@ -1,7 +1,7 @@
 # Modulo-Playground-GREAT
 <h3>Projeto de Monografia do Curso de Ciência da Computação</h3><br>
 <h4>Módulo Playground da ferramenta de criação de jogos educacionais, GREAT.</h4><br>
-<h4>Requisitos:</h4><br>
+<h4>Features:</h4><br>
 - Cadastro de usuários;<br>
 - Login;<br>
 - Exibição de disciplinas, tópicos, questionários e perguntas cadastradas no sistema;<br>
